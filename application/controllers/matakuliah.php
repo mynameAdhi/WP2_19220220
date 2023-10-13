@@ -1,4 +1,4 @@
-<?php 
+<?php
 class matakuliah extends CI_Controller
 {
     public function index()
@@ -11,7 +11,9 @@ class matakuliah extends CI_Controller
         $data = [
             'kode' => $this->input->post('kode'),
             'nama' => $this->input->post('nama'),
-            'sks' => $this->input->post('sks')
+            'sks'  => $this->input->post('sks')
         ];
+
+        $this->load->view('view-data-matakuliah', $data);
     }
 }
